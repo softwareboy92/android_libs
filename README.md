@@ -266,3 +266,33 @@ public class Loader extends ObjectLoader implements ApiService {
     }
 }
 ```
+在Presenter 中，需要调用并且返回所需要的参数 例如：
+``` java
+   public class MainPresenter extends BasePresenter<MainContract.View> implements MainContract.Presenter {
+       @Override
+       public void getVersion(Activity activity) {
+           if (mView != null && checkNet(activity)) {
+               mView.showNoNet();
+               return;
+           }
+           mView.showLoading();
+           Loader.getLoader().getAppVersion()
+                   .compose(mView.bindToLife())
+                   .subscribe(new BaseObserver<UpdateResponse>() {
+                       @Override
+                       public void onSuccess(UpdateResponse response) {
+                           mView.hideLoading();
+                           if (response.isSuccess()) {
+                               //do something and return data
+                               mView.onSuccess(response.data.getLinkUrl());
+                           }
+                       }
+                       @Override
+                       public void onFail(Throwable e) {
+                           mView.hideLoading();
+                       }
+                   });
+       }
+   }
+
+```
