@@ -296,3 +296,17 @@ public class Loader extends ObjectLoader implements ApiService {
    }
 
 ```
+在Contract中需要处理的代码
+``` java
+public interface MainContract {
+
+    interface View extends BaseContract.BaseView{
+        void onSuccess(String LinkUrl);
+    }
+    interface Presenter extends BaseContract.BasePresenter<View>{
+
+        void getVersion(Activity activity);
+
+    }
+}
+```
