@@ -172,3 +172,4 @@ public class MultiTypeAdapter extends BaseMultiTypeRecycleAdapter<HotCoinsRespon
 }
 
 ```
+* * *
