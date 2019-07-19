@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">libbasemvp</string>
+
+    <string name="setting_language_title">多语言设置</string>
+    <string name="setting_language">多语言设置</string>
+    <string name="setting_simplified_chinese">简体中文</string>
+    <string name="setting_language_auto">跟随系统</string>
+    <string name="setting_traditional_chinese">繁体中文</string>
+    <string name="setting_language_english">English</string>
+    <string name="setting_language_Japanese">Japanese</string>
+    <string name="setting_language_Korean">Korean</string>
+</resources>

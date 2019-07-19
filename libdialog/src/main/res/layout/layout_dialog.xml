@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="30dp"
+    android:id="@+id/linear_dialog"
+    android:layout_marginRight="30dp"
+    android:background="@drawable/shape_pgc_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="投注成功"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:padding="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:inputType="textMultiLine"
+        android:text="13a1f98d03402bd30f53c6a53648529031368bb3316a8e4f2b3d9908e72693aa.15d2183033bcfc4e8bf4927ec34c8aa9a01f996c156ee295b13ebbb7bff38aee.154491da483425fcabb3fe0be0935430ed9957004a4b08632e9179ac466cbfae.28344496d3b037c79faf74496d534fec31e576e23b620015764cebfd8a64947b.0c994776493f1f5d91306bfa43b6e88d400ffb4b03c1f1804f0f045d0e8186fb.0958b8d64f968adc9bacef05afc3ec7fc73edd192216f362e31786b32f7bc78a.221c9daf9a2ea7fbf868d2b950e3fac688d52d2e45416d43c563cafe37c25db5"
+        android:textColor="#FFF"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/alert_dialog_line"/>
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="复制"
+        android:textStyle="bold"
+        android:background="#272A3F"
+        android:textColor="#FFF"
+        android:textSize="16sp" />
+
+</LinearLayout>

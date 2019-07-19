@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/android_libs.iml" filepath="$PROJECT_DIR$/android_libs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libdialog/libdialog.iml" filepath="$PROJECT_DIR$/libdialog/libdialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libhttp/libhttp.iml" filepath="$PROJECT_DIR$/libhttp/libhttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libmvp/libmvp.iml" filepath="$PROJECT_DIR$/libmvp/libmvp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libscan/libscan.iml" filepath="$PROJECT_DIR$/libscan/libscan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libsocket/libsocket.iml" filepath="$PROJECT_DIR$/libsocket/libsocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libutils/libutils.iml" filepath="$PROJECT_DIR$/libutils/libutils.iml" />
+    </modules>
+  </component>
+</project>
