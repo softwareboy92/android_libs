@@ -42,7 +42,7 @@ public class MultiTypeAdapter extends BaseMultiTypeRecycleAdapter<HotCoinsRespon
 
     @Override
     protected void bindData(CommonViewHolder holder, HotCoinsResponse data) {
-        holder.setText(R.id.tv_title, data.getId()+"")
+        holder.setText(R.id.tv_title, data.getCategory())
                 .setText(R.id.tv_content,data.getTokenAddress())
                 .setCommonClickListener(commonClickListener);
     }

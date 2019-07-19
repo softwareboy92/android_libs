@@ -33,8 +33,9 @@ a. Contract
 ```
 b. Presenter
 ``` java
- public class MvpPresenter extends BasePresenter<MvpContract.View> implements MvpContract.Presenter{
-      }
+ public class MvpPresenter extends BasePresenter<MvpContract.View> 
+                                implements MvpContract.Presenter{
+  }
 ```
 c. Activity
 ``` java
@@ -116,4 +117,58 @@ public class ListViewAdapter extends BaseListAdapter<ListViewModel> {
         tv_content.setText(model.getContract());
     }
 }
+```
+
+有关RecycleView的Adapter创建
+``` java
+public class RecycleViewAdapter extends BaseSimpleRecycleViewAdapter<ListViewModel> {
+    @Override
+    protected int bindLayout(int viewType) {
+        return R.layout.item_01;
+    }
+
+    @Override
+    protected void bind(BaseViewHolder holder, ListViewModel data) {
+        TextView tv_title = holder.itemView.findViewById(R.id.tv_title);
+        TextView tv_content = holder.itemView.findViewById(R.id.tv_content);
+        
+        tv_title.setText(data.getTitle());
+        tv_content.setText(data.getContract());
+    }
+}
+```
+有关RecycleView的多布局创建
+``` java
+public class MultiTypeAdapter extends BaseMultiTypeRecycleAdapter<HotCoinsResponse> 
+                                    implements MultiTypeSupport<HotCoinsResponse> {
+
+    private CommonViewHolder.onItemCommonClickListener commonClickListener;
+
+    public MultiTypeAdapter(Context context, List<HotCoinsResponse> dataList) {
+        super(context, dataList, R.layout.item_01);
+        this.multiTypeSupport = this;
+    }
+    public MultiTypeAdapter(Context context, List<HotCoinsResponse> dataList, 
+            CommonViewHolder.onItemCommonClickListener commonClickListener) {
+        super(context, dataList, R.layout.item_01);
+        this.commonClickListener = commonClickListener;
+        this.multiTypeSupport = this;
+    }
+
+    @Override
+    public int getLayoutId(HotCoinsResponse item, int position) {
+        if (item.getSymbol().equals("HT")) {
+            return R.layout.item_01;
+        }
+        return R.layout.item_02;
+    }
+
+    @Override
+    protected void bindData(CommonViewHolder holder, HotCoinsResponse data) {
+        holder.setText(R.id.tv_title, data.getCategory())
+                .setText(R.id.tv_content,data.getTokenAddress())
+                .setCommonClickListener(commonClickListener);
+    }
+}
+
 ```
