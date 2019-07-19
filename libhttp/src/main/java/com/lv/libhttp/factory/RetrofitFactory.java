@@ -16,11 +16,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class RetrofitFactory {
 
-    public String URL = "http://104.199.192.66:9020/";//线上
     private static RetrofitFactory mFactory;
     private Retrofit mRetrofit;
 
-    private RetrofitFactory() {
+    private RetrofitFactory(String url) {
         OkHttpClient.Builder builder = new OkHttpClient().newBuilder();
         builder.readTimeout(30, TimeUnit.SECONDS);
         builder.writeTimeout(30, TimeUnit.SECONDS);
@@ -36,17 +35,17 @@ public class RetrofitFactory {
         OkHttpClient client = builder.build();
 
         mRetrofit = new Retrofit.Builder()
-                .baseUrl(URL)
+                .baseUrl(url)
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
 
-    public static RetrofitFactory getFactory() {
+    public static RetrofitFactory getFactory(String url) {
         synchronized (RetrofitFactory.class) {
             if (mFactory == null)
-                mFactory = new RetrofitFactory();
+                mFactory = new RetrofitFactory(url);
         }
         return mFactory;
     }

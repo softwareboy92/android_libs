@@ -19,6 +19,7 @@ public class Loader extends ObjectLoader implements ApiService {
 
     private ApiService mApiService;
     private static Loader mLoader;
+    private static String url;
 
     public static Loader getLoader() {
         if (mLoader==null){
@@ -29,7 +30,7 @@ public class Loader extends ObjectLoader implements ApiService {
 
     public Loader() {
         if (mApiService == null)
-            mApiService = RetrofitFactory.getFactory().createService(ApiService.class);
+            mApiService = RetrofitFactory.getFactory(url).createService(ApiService.class);
     }
 
     public Observable<UpdateResponse> getAppVersion() {

@@ -14,6 +14,7 @@ import java.util.List;
  * @param
  **/
 public interface MainContract {
+
     interface View extends BaseContract.BaseView{
         void onSuccess(List<HotCoinsResponse> mList);
     }
