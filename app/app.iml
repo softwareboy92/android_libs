@@ -184,5 +184,11 @@
     <orderEntry type="module" module-name="libhttp" />
     <orderEntry type="module" module-name="libutils" />
     <orderEntry type="module" module-name="libsocket" />
+    <orderEntry type="module" module-name="libdialog" />
+    <orderEntry type="module" module-name="libscan" />
+    <orderEntry type="module" module-name="libmvp" />
+    <orderEntry type="module" module-name="libhttp" />
+    <orderEntry type="module" module-name="libutils" />
+    <orderEntry type="module" module-name="libsocket" />
   </component>
 </module>

@@ -8,12 +8,17 @@ import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
 
+import com.gyf.immersionbar.ImmersionBar;
+import com.lv.libmvp.R;
 import com.lv.libmvp.contract.BaseContract;
 import com.lv.libmvp.languageutils.MultiLanguageUtil;
 import com.lv.libmvp.languageutils.OnChangeLanguageEvent;
@@ -48,13 +53,9 @@ public abstract class BaseActivity<P extends BaseContract.BasePresenter>
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initBar();
         AppManager.addActivity(this);
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(getActivityLayoutID());
-        //绑定 Activity
         //设置语言
         MultiLanguageUtil.init(this);
         MultiLanguageUtil.getInstance().setConfiguration();
@@ -65,6 +66,17 @@ public abstract class BaseActivity<P extends BaseContract.BasePresenter>
         mContext = this;
         attachView();
         initView(savedInstanceState);
+
+    }
+
+    protected void initBar() {
+        ImmersionBar.with(this)
+                .transparentStatusBar()
+                .statusBarColor(android.R.color.white)
+                .statusBarDarkFont(true)
+                .fullScreen(true)
+                .fitsSystemWindows(true)
+                .init();
     }
 
 
@@ -144,7 +156,7 @@ public abstract class BaseActivity<P extends BaseContract.BasePresenter>
 
     @Override
     public void showLoading() {
-        if (dialogLoadding==null){
+        if (dialogLoadding == null) {
             dialogLoadding = new DialogLoadding(this);
         }
         dialogLoadding.showDialog();
