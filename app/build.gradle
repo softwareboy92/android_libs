@@ -37,5 +37,6 @@ dependencies {
     implementation project(":libscan")
     implementation project(":libdialog")
     implementation project(":libsocket")
+    implementation project(":libimage")
 
 }
