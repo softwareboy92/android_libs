@@ -22,6 +22,9 @@ import com.lv.libimage.util.Utils;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * @author by lvzhongdi on 2019/7/24.
+ */
 public class CircleProgressView extends ProgressBar {
 
     private int mReachBarSize = Utils.dp2px(getContext(), 2); // 未完成进度条大小

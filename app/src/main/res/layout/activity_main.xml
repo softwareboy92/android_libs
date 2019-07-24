@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFFFFFFF"
     android:fillViewport="true"
     tools:context=".activity.MainActivity">
@@ -15,19 +16,19 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="#343434"
             android:gravity="center"
-            android:text="@string/app_name"/>
+            android:text="@string/app_name"
+            android:textColor="#343434"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/show_font"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="#343434"
             android:gravity="center"
-            android:text="@string/app_name"/>
+            android:text="@string/app_name"
+            android:textColor="#343434"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/scan_camare"
@@ -78,11 +79,73 @@
             android:layout_marginRight="@dimen/dp_30"
             android:text="custom_dialog_03" />
 
+
+        <com.lv.libimage.view.GlideImageView
+            android:id="@+id/glide_view01"
+            android:layout_width="@dimen/dp_135"
+            android:layout_height="@dimen/dp_135"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_5"
+            android:scaleType="centerCrop" />
+
+        <com.lv.libimage.view.GlideImageView
+            android:id="@+id/glide_view02"
+            android:layout_width="@dimen/dp_135"
+            android:layout_height="@dimen/dp_135"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_5"
+            android:scaleType="centerCrop" />
+
+        <com.lv.libimage.view.GlideImageView
+            android:id="@+id/glide_view03"
+            android:layout_width="@dimen/dp_135"
+            android:layout_height="@dimen/dp_135"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_5"
+            android:scaleType="centerCrop" />
+
+        <com.lv.libimage.view.GlideImageView
+            android:id="@+id/glide_view04"
+            android:layout_width="@dimen/dp_135"
+            android:layout_height="@dimen/dp_135"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_5"
+            android:scaleType="centerCrop" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
+
+            <com.lv.libimage.view.GlideImageView
+                android:id="@+id/image31"
+                android:layout_width="@dimen/dp_240"
+                android:layout_height="@dimen/dp_135"
+                android:transitionName="the image of transition"/>
+
+            <com.lv.libimage.progress.CircleProgressView
+                android:id="@+id/progressView1"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_centerInParent="true"
+                android:progress="0"
+                android:visibility="gone"
+                app:cpv_innerPadding="2dp"
+                app:cpv_outerColor="#E5ffffff"
+                app:cpv_outerSize="1dp"
+                app:cpv_progressNormalColor="@android:color/transparent"
+                app:cpv_progressReachColor="#E5ffffff"
+                app:cpv_progressStyle="FillInnerArc"/>
+        </RelativeLayout>
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycleview"
-            android:background="#FFFFFFFF"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="#FFFFFFFF" />
 
     </LinearLayout>
 </com.lv.libmvp.weight.CustomScrollView>

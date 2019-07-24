@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.lv.libdialog.BottomPopupWindow;
 import com.lv.libdialog.EditDialog;
 import com.lv.libdialog.EnsureDialog;
+import com.lv.libimage.progress.CircleProgressView;
+import com.lv.libimage.view.GlideImageView;
 import com.lv.libmvp.activity.BaseActivity;
 import com.lv.libmvp.adapter.CommonViewHolder;
 import com.lv.libscan.activity.CaptureActivity;
@@ -36,6 +39,14 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     private MultiTypeAdapter mAdapter;
     private List<HotCoinsResponse> mList = new ArrayList<>();
     private int REQUEST_CODE = 11;
+
+    private GlideImageView glide_view01;
+    private GlideImageView glide_view02;
+    private GlideImageView glide_view03;
+    private GlideImageView glide_view04;
+    private GlideImageView image31;
+    private CircleProgressView progressView1;
+
     @Override
     protected void initView(Bundle savedInstanceState) {
         TextView show_font = findViewById(R.id.show_font);
@@ -95,6 +106,32 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         recycleview.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new MultiTypeAdapter(this, mList, this);
         recycleview.setAdapter(mAdapter);
+        mPresenter.getHotCoins(this);
+        progressView1 = findViewById(R.id.progressView1);
+        image31 = findViewById(R.id.image31);
+        glide_view01 = findViewById(R.id.glide_view01);
+        glide_view02 = findViewById(R.id.glide_view02);
+        glide_view03 = findViewById(R.id.glide_view03);
+        glide_view04 = findViewById(R.id.glide_view04);
+
+        glide_view01.enableState(true).load("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg");
+        glide_view02.loadCircle("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg");
+        glide_view03.load("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg", R.mipmap.ic_launcher_round);
+        glide_view04.fitCenter().load("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg", R.mipmap.ic_launcher_round,10);
+
+        image31.centerCrop()
+                .error(R.mipmap.image_load_err)
+                .load("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg", R.color.colorAccent,
+                        (isComplete, percentage, bytesRead, totalBytes) -> {
+            if (isComplete) {
+                progressView1.setVisibility(View.GONE);
+            } else {
+                progressView1.setVisibility(View.VISIBLE);
+                progressView1.setProgress(percentage);
+            }
+        });
+
+
     }
 
     @Override

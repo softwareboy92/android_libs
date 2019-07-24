@@ -21,7 +21,7 @@ import com.lv.libimage.progress.ProgressManager;
 import java.lang.ref.WeakReference;
 
 /**
- * @author by sunfusheng on 2017/6/6.
+ * @author by lvzhongdi on 2019/7/24.
  */
 public class GlideImageLoader {
 
