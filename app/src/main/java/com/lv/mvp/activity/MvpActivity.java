@@ -3,7 +3,10 @@ package com.lv.mvp.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import com.lv.libimage.progress.CircleProgressView;
+import com.lv.libimage.view.GlideImageView;
 import com.lv.libmvp.activity.BaseActivity;
 import com.lv.mvp.R;
 import com.lv.mvp.contract.MvpContract;
@@ -17,9 +20,25 @@ import com.lv.mvp.presenter.MvpPresenter;
  **/
 public class MvpActivity extends BaseActivity<MvpPresenter> implements MvpContract.View {
 
+    public static final String KEY_IMAGE_URL = "image_url";
+    public static final String KEY_IMAGE_URL_THUMBNAIL = "image_url_thumbnail";
+
+    GlideImageView glideImageView;
+    CircleProgressView progressView;
+
+    String image_url;
+    String image_url_thumbnail;
+
     @Override
     protected void initView(Bundle savedInstanceState) {
+        image_url = getIntent().getStringExtra(KEY_IMAGE_URL);
+        image_url_thumbnail = getIntent().getStringExtra(KEY_IMAGE_URL_THUMBNAIL);
 
+        glideImageView = findViewById(R.id.glideImageView);
+        progressView = findViewById(R.id.progressView);
+        glideImageView.setOnClickListener(v -> onBackPressed());
+
+        loadImage();
     }
 
     @Override
@@ -35,5 +54,16 @@ public class MvpActivity extends BaseActivity<MvpPresenter> implements MvpContra
     @Override
     protected void refershDatas(Context context, Intent intent) {
 
+    }
+
+    private void loadImage() {
+        glideImageView.load(image_url, android.R.color.transparent, (isComplete, percentage, bytesRead, totalBytes) -> {
+            if (isComplete) {
+                progressView.setVisibility(View.GONE);
+            } else {
+                progressView.setVisibility(View.VISIBLE);
+                progressView.setProgress(percentage);
+            }
+        });
     }
 }

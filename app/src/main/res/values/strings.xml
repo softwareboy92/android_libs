@@ -1,3 +1,5 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">DemoMvp</string>
+    <string name="transitional_image" tools:ignore="MissingTranslation">the image of transition</string>
+
 </resources>

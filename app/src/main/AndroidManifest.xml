@@ -30,6 +30,8 @@
 
         <activity android:name="com.lv.libscan.activity.CaptureActivity"/>
 
+        <activity android:name=".activity.MvpActivity"/>
+
         <meta-data
             android:name="design_width_in_dp"
             android:value="1080"/>

@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.ActivityOptionsCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -46,6 +48,9 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     private GlideImageView glide_view04;
     private GlideImageView image31;
     private CircleProgressView progressView1;
+
+    public static final String girl = "http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg";
+    public static final String girl_thumbnail = "http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg";
 
     @Override
     protected void initView(Bundle savedInstanceState) {
@@ -118,6 +123,14 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         glide_view02.loadCircle("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg");
         glide_view03.load("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg", R.mipmap.ic_launcher_round);
         glide_view04.fitCenter().load("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg", R.mipmap.ic_launcher_round,10);
+
+        image31.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MvpActivity.class);
+            intent.putExtra(MvpActivity.KEY_IMAGE_URL, girl);
+            intent.putExtra(MvpActivity.KEY_IMAGE_URL_THUMBNAIL, girl_thumbnail);
+            ActivityOptionsCompat compat = ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, image31, getString(R.string.transitional_image));
+            ActivityCompat.startActivity(MainActivity.this, intent, compat.toBundle());
+        });
 
         image31.centerCrop()
                 .error(R.mipmap.image_load_err)
