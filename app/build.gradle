@@ -40,5 +40,6 @@ dependencies {
     implementation project(":libdialog")
     implementation project(":libsocket")
     implementation project(":libimage")
+    implementation project(":libsqlite")
 
 }

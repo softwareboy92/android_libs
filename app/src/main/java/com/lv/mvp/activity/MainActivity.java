@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,11 +24,13 @@ import com.lv.libimage.view.GlideImageView;
 import com.lv.libmvp.activity.BaseActivity;
 import com.lv.libmvp.adapter.CommonViewHolder;
 import com.lv.libscan.activity.CaptureActivity;
+import com.lv.libsqlite.utils.DatabaseUtils;
 import com.lv.libutils.FontSetting;
 import com.lv.mvp.R;
 import com.lv.mvp.adapter.MultiTypeAdapter;
 import com.lv.mvp.contract.MainContract;
 import com.lv.mvp.model.HotCoinsResponse;
+import com.lv.mvp.model.Persion;
 import com.lv.mvp.presenter.MainPresenter;
 
 
@@ -122,7 +125,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         glide_view01.enableState(true).load("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg");
         glide_view02.loadCircle("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg");
         glide_view03.load("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg", R.mipmap.ic_launcher_round);
-        glide_view04.fitCenter().load("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg", R.mipmap.ic_launcher_round,10);
+        glide_view04.fitCenter().load("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg", R.mipmap.ic_launcher_round, 10);
 
         image31.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, MvpActivity.class);
@@ -136,14 +139,25 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
                 .error(R.mipmap.image_load_err)
                 .load("http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg", R.color.colorAccent,
                         (isComplete, percentage, bytesRead, totalBytes) -> {
-            if (isComplete) {
-                progressView1.setVisibility(View.GONE);
-            } else {
-                progressView1.setVisibility(View.VISIBLE);
-                progressView1.setProgress(percentage);
+                            if (isComplete) {
+                                progressView1.setVisibility(View.GONE);
+                            } else {
+                                progressView1.setVisibility(View.VISIBLE);
+                                progressView1.setProgress(percentage);
+                            }
+                        });
+
+        //todo 数据库创建及测试
+        DatabaseUtils.initHelper(this, "user.db");
+        //String userName, int sex, int age, String brithDay
+        Persion persion = new Persion("张三",0,18,"2019年07月26日16:40:36");
+        DatabaseUtils.getHelper().save(persion);
+        findViewById(R.id.database_quary).setOnClickListener(view -> {
+            List<Persion> persions = DatabaseUtils.getHelper().queryAll(Persion.class);
+            for (Persion persion1 : persions) {
+                Log.e("lvlvlvl", "initView: "+ persion1.toString());
             }
         });
-
 
     }
 

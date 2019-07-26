@@ -80,6 +80,13 @@
             android:layout_marginRight="@dimen/dp_30"
             android:text="custom_dialog_03" />
 
+        <Button
+            android:id="@+id/database_quary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:text="database_quary" />
 
         <com.lv.libimage.view.GlideImageView
             android:id="@+id/glide_view01"
