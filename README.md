@@ -4,9 +4,10 @@
 ##### 包含内容
 1. MVP封装
 2. 网络封装
-3. 通用的Dialog封装
-4. 扫一扫封装
-5. 常用的工具
+3. Sqlite封装
+4. 通用的Dialog封装
+5. 扫一扫封装
+6. 常用的工具
 
 GitHub：https://github.com/softwareboy92/android_libs
 
@@ -309,4 +310,33 @@ public interface MainContract {
 
     }
 }
+```
+* * *
+### 三. Sqlite的引用使用
+
+引用
+``` java
+    implementation 'libsqlite:com.lv.libsqlite:0.0.1'
+```
+使用方法：
+创建：
+``` java
+    DatabaseUtils.initHelper(this, "persion.db");
+```
+插入：
+``` java
+    Persion persion = new Persion("张三",0,18,"2019年07月26日16:40:36");
+    DatabaseUtils.getHelper().save(persion);
+```
+查询所有:
+``` java
+    DatabaseUtils.getHelper().queryAll(Persion.class);
+```
+根据ID查询：
+``` java
+    DatabaseUtils.getHelper().queryById(Persion.class,"1");
+```
+删除：
+``` java
+    DatabaseUtils.getHelper().delete(persion);
 ```
