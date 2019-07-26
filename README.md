@@ -27,6 +27,13 @@ GitHub：https://github.com/softwareboy92/android_libs
 1. 项目中包含BaseView、BasePresenter、BaseFragment、BaseActivity、BaseAdapter(ListView的Adapter、RecycleView的Adapter)
 2. 使用方法
 
+引用：
+``` java
+   implementation 'libmvp:com.lv.libmvp:0.0.1'
+```
+
+**注意：** 在Application中添加 MultiLanguageUtil.init(this);
+
 a. Contract
 ``` java
   public interface MvpContract {
@@ -179,6 +186,12 @@ public class MultiTypeAdapter extends BaseMultiTypeRecycleAdapter<HotCoinsRespon
 ### 二. Retrifit2.0 
 ##### 简介：
 1. 这里简单举例，然后完成使用
+
+引用:
+``` java
+    implementation 'libhttp:com.lv.libhttp:0.0.1'
+```
+
  新建一个ApiService的类:
  
  ``` java
