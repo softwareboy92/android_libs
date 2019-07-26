@@ -7,7 +7,8 @@
 3. Sqlite封装
 4. 通用的Dialog封装
 5. 扫一扫封装
-6. 常用的工具
+6. 基于Glide的图片封装
+7. 常用的工具
 
 GitHub：https://github.com/softwareboy92/android_libs
 
@@ -354,3 +355,13 @@ public interface MainContract {
 ``` java
     DatabaseUtils.getHelper().delete(persion);
 ```
+
+* * *
+
+### 四. 通用的Dialog封装
+
+### 五. 扫一扫封装
+
+### 六. 基于Glide的图片封装
+
+### 七. 常用的工具
