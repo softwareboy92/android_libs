@@ -113,6 +113,8 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         recycleview.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         recycleview.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new MultiTypeAdapter(this, mList, this);
+
+
         recycleview.setAdapter(mAdapter);
         mPresenter.getHotCoins(this);
         progressView1 = findViewById(R.id.progressView1);
@@ -159,7 +161,9 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
             }
         });
 
-
+        findViewById(R.id.custom_dialog_04).setOnClickListener(view -> {
+            startActivity(new Intent(this,RecycleViewActivity.class));
+        });
 
     }
 

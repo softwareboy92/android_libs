@@ -3,12 +3,14 @@ package com.lv.mvp.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import com.lv.libimage.progress.CircleProgressView;
 import com.lv.libimage.view.GlideImageView;
 import com.lv.libmvp.activity.BaseActivity;
 import com.lv.mvp.R;
+import com.lv.mvp.adapter.RecycleViewAdapter;
 import com.lv.mvp.contract.MvpContract;
 import com.lv.mvp.presenter.MvpPresenter;
 
@@ -29,6 +31,9 @@ public class MvpActivity extends BaseActivity<MvpPresenter> implements MvpContra
     String image_url;
     String image_url_thumbnail;
 
+
+
+
     @Override
     protected void initView(Bundle savedInstanceState) {
         image_url = getIntent().getStringExtra(KEY_IMAGE_URL);
@@ -39,6 +44,9 @@ public class MvpActivity extends BaseActivity<MvpPresenter> implements MvpContra
         glideImageView.setOnClickListener(v -> onBackPressed());
 
         loadImage();
+
+
+
     }
 
     @Override

@@ -1,6 +1,9 @@
 package com.lv.mvp.adapter;
 
+import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 
 import com.lv.libmvp.adapter.BaseSimpleRecycleViewAdapter;
 import com.lv.libmvp.adapter.BaseViewHolder;
@@ -27,4 +30,6 @@ public class RecycleViewAdapter extends BaseSimpleRecycleViewAdapter<ListViewMod
         tv_title.setText(data.getTitle());
         tv_content.setText(data.getContract());
     }
+
+
 }
