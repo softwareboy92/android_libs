@@ -16,8 +16,6 @@ import android.widget.ScrollView;
 /**
  * 作者：created by albert on 2018/9/6 13:58
  * 邮箱：lvzhongdi@icloud.com
- * 自定义个Dialog
- *
  * @param
  **/
 public class CustomScrollView extends ScrollView {

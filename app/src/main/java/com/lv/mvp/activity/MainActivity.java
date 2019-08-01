@@ -28,6 +28,7 @@ import com.lv.libsqlite.utils.DatabaseUtils;
 import com.lv.libutils.FontSetting;
 import com.lv.mvp.R;
 import com.lv.mvp.adapter.MultiTypeAdapter;
+import com.lv.mvp.adapter.MyGridLayoutManager;
 import com.lv.mvp.contract.MainContract;
 import com.lv.mvp.model.HotCoinsResponse;
 import com.lv.mvp.model.Persion;
@@ -116,7 +117,9 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         });
         recycleview = findViewById(R.id.recycleview);
         recycleview.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        recycleview.setLayoutManager(new LinearLayoutManager(this));
+        MyGridLayoutManager layoutManager = new MyGridLayoutManager(this,10);
+        layoutManager.setScrollEnabled(false);
+        recycleview.setLayoutManager(layoutManager);
         mAdapter = new MultiTypeAdapter(this, mList, this);
 
 
@@ -169,7 +172,6 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         findViewById(R.id.custom_dialog_04).setOnClickListener(view -> {
             startActivity(new Intent(this,RecycleViewActivity.class));
         });
-
     }
 
     @Override
