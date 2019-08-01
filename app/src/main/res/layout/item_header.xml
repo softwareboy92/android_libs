@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
+    <com.lv.libbanner.BannerLayout
+        android:id="@+id/recycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
-        android:textSize="@dimen/sp_13"
-        android:gravity="center"
-        android:text="我是头"/>
+        android:layout_height="@dimen/dp_200"
+        app:autoPlaying="true"
+        app:centerScale="1.3"
+        app:itemSpace="20"
+        app:moveSpeed="1.8" />
 
 </LinearLayout>

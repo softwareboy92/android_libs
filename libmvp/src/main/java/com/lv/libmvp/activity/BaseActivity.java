@@ -17,6 +17,7 @@ import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
 
+import com.gyf.immersionbar.BarHide;
 import com.gyf.immersionbar.ImmersionBar;
 import com.lv.libmvp.R;
 import com.lv.libmvp.contract.BaseContract;
@@ -53,7 +54,7 @@ public abstract class BaseActivity<P extends BaseContract.BasePresenter>
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initBar();
+        initBar(getBarColor());
         AppManager.addActivity(this);
         setContentView(getActivityLayoutID());
         //设置语言
@@ -69,15 +70,26 @@ public abstract class BaseActivity<P extends BaseContract.BasePresenter>
 
     }
 
-    protected void initBar() {
-        ImmersionBar.with(this)
-                .transparentStatusBar()
-                .statusBarColor(android.R.color.white)
-                .statusBarDarkFont(true)
-                .fullScreen(true)
-                .fitsSystemWindows(true)
-                .init();
+    protected void initBar(int id) {
+        if (id == 0) {
+
+        } else {
+            ImmersionBar.with(this)
+                    .transparentStatusBar()  //透明状态栏，不写默认透明色
+                    .transparentNavigationBar()  //透明导航栏，不写默认黑色(设置此方法，fullScreen()方法自动为true)
+                    .transparentBar()
+                    .statusBarColor(id)
+                    .statusBarDarkFont(true)
+                    .fullScreen(true)
+                    .fitsSystemWindows(true)
+                    .keyboardEnable(true)
+                    .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
+                    .init();
+        }
     }
+
+
+    protected abstract int getBarColor();
 
 
     @Override

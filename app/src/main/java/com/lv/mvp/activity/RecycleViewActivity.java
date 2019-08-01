@@ -48,6 +48,11 @@ public class RecycleViewActivity extends BaseActivity<RecycleViewPresenter> impl
 
 
     @Override
+    protected int getBarColor() {
+        return R.color.white;
+    }
+
+    @Override
     protected void initView(Bundle savedInstanceState) {
 //        mInflater = LayoutInflater.from(this);
         weakReference = new WeakReference<>(this);
@@ -76,12 +81,17 @@ public class RecycleViewActivity extends BaseActivity<RecycleViewPresenter> impl
 //                .bind(TypeVo.class,new TypeItemView(weakReference.get()))
                 .build();
         mRecyclerView.setAdapter(mAdapter);
+
+        List<String> mImages = new ArrayList<>();
+        mImages.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564643049484&di=8f2fb87cdf09670084fea4dfd21cb8d1&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fcefc1e178a82b9019e14d38c798da9773812efd0.jpg");
+        mImages.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564642990384&di=47e30615c7dc8e135de10bd411145a85&imgtype=0&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F8ad4b31c8701a18b624702f0942f07082938fee5.jpg");
+        mImages.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564642990384&di=009dd1ac656c13e9a9903792d1c37521&imgtype=0&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fe1fe9925bc315c60c9fcca4987b1cb134954772f.jpg");
+        items.add(new Persion("WangWU", 0, 18, "2019年07月26日16:40:36",mImages));
+
         for (int i = 0; i < 5; i++) {
             items.add(new ListViewModel("Title" + i, "这里是内容" + i));
         }
-        for (int i = 0; i < 10; i++) {
-            items.add(new Persion("张三", 0, 18, "2019年07月26日16:40:36"));
-        }
+
         for (int i = 0; i < 5; i++) {
             items.add(new Car("奥迪", "110100", "黑色"));
         }

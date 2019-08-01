@@ -1,5 +1,7 @@
 package com.lv.mvp.model;
 
+import java.util.List;
+
 /**
  * 作者：created by albert on 2019-07-26 16:38
  * 邮箱：lvzhongdi@icloud.com
@@ -12,6 +14,8 @@ public class Persion {
     private int age;
     private String brithDay;
 
+    private List<String> mImages;
+
     public Persion() {
     }
 
@@ -20,6 +24,22 @@ public class Persion {
         this.sex = sex;
         this.age = age;
         this.brithDay = brithDay;
+    }
+
+    public Persion(String userName, int sex, int age, String brithDay, List<String> images) {
+        this.userName = userName;
+        this.sex = sex;
+        this.age = age;
+        this.brithDay = brithDay;
+        mImages = images;
+    }
+
+    public List<String> getImages() {
+        return mImages;
+    }
+
+    public void setImages(List<String> images) {
+        mImages = images;
     }
 
     public String getUserName() {

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android_libs.iml" filepath="$PROJECT_DIR$/android_libs.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libbanner/libbanner.iml" filepath="$PROJECT_DIR$/libbanner/libbanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/libdialog/libdialog.iml" filepath="$PROJECT_DIR$/libdialog/libdialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/libhttp/libhttp.iml" filepath="$PROJECT_DIR$/libhttp/libhttp.iml" />
       <module fileurl="file://$PROJECT_DIR$/libimage/libimage.iml" filepath="$PROJECT_DIR$/libimage/libimage.iml" />

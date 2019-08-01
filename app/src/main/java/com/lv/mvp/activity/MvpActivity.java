@@ -2,6 +2,7 @@ package com.lv.mvp.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,21 +33,19 @@ public class MvpActivity extends BaseActivity<MvpPresenter> implements MvpContra
     String image_url_thumbnail;
 
 
-
+    @Override
+    protected int getBarColor() {
+        return R.color.white;
+    }
 
     @Override
     protected void initView(Bundle savedInstanceState) {
         image_url = getIntent().getStringExtra(KEY_IMAGE_URL);
         image_url_thumbnail = getIntent().getStringExtra(KEY_IMAGE_URL_THUMBNAIL);
-
         glideImageView = findViewById(R.id.glideImageView);
         progressView = findViewById(R.id.progressView);
         glideImageView.setOnClickListener(v -> onBackPressed());
-
         loadImage();
-
-
-
     }
 
     @Override

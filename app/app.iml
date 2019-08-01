@@ -121,6 +121,7 @@
     <orderEntry type="library" name="Gradle: androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.bumptech.glide:annotations:4.9.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:converter-gson:2.6.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.cardview:cardview:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.recyclerview:recyclerview:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-runtime:2.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar" level="project" />
@@ -183,14 +184,7 @@
     <orderEntry type="module" module-name="libimage" />
     <orderEntry type="module" module-name="libdialog" />
     <orderEntry type="module" module-name="libscan" />
-    <orderEntry type="module" module-name="libsqlite" />
-    <orderEntry type="module" module-name="libmvp" />
-    <orderEntry type="module" module-name="libhttp" />
-    <orderEntry type="module" module-name="libutils" />
-    <orderEntry type="module" module-name="libsocket" />
-    <orderEntry type="module" module-name="libimage" />
-    <orderEntry type="module" module-name="libdialog" />
-    <orderEntry type="module" module-name="libscan" />
+    <orderEntry type="module" module-name="libbanner" />
     <orderEntry type="module" module-name="libsqlite" />
     <orderEntry type="module" module-name="libmvp" />
     <orderEntry type="module" module-name="libhttp" />

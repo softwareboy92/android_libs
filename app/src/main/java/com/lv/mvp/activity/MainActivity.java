@@ -56,6 +56,11 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     public static final String girl_thumbnail = "http://pic1.win4000.com/wallpaper/3/58b3bff670e11.jpg";
 
     @Override
+    protected int getBarColor() {
+        return R.color.white;
+    }
+
+    @Override
     protected void initView(Bundle savedInstanceState) {
         TextView show_font = findViewById(R.id.show_font);
         FontSetting.setFont(this, show_font, "fonts/苹方黑体-中粗-简.ttf");
