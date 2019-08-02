@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="3000"
+    android:startOffset="1000"
+    android:fillBefore="true"
+    android:fromXScale="0.0"
+    android:fromYScale="0.0"
+    android:toXScale="1.0"
+    android:toYScale="1.0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    />
+
+    <!--
+    缩放动画（Scale）
+    1.android:duration="3000": 动画持续时间（ms），必须设置，动画才能有效果
+    2.android:startOffset="1000"：动画延迟开始时间
+    3.android:fillBefore="true":动画播放完毕后，师傅是否停留在动画开始的状态，默认为True
+    4.android:fillAfter = "false" // 动画播放完后，视图是否会停留在动画结束的状态，优先于fillBefore值，默认为false
+    5.android:fillEnabled= "true" // 是否应用fillBefore值，对fillAfter值无影响，默认为true
+    6.android:repeatMode= "restart" // 选择重复播放动画模式，restart代表正序重放，reverse代表倒序回放，默认为restart|
+    7.android:repeatCount = "0" // 重放次数（所以动画的播放次数=重放次数+1），为infinite时无限重复
+    8.android:interpolator = @[package:]anim/interpolator_resource // 插值器，即影响动画的播放速度,下面会详细讲
+    // 以下参数是缩放动画特有的属性
+    9.android:fromXScale="0.0"
+    // 动画在水平方向X的起始缩放倍数
+    // 0.0表示收缩到没有；1.0表示正常无伸缩
+    // 值小于1.0表示收缩；值大于1.0表示放大
+    10.android:toXScale="2"  //动画在水平方向X的结束缩放倍数
+    11.android:fromYScale="0.0" //动画开始前在竖直方向Y的起始缩放倍数
+    12.android:toYScale="2" //动画在竖直方向Y的结束缩放倍数
+    13.android:pivotX="50%" // 缩放轴点的x坐标
+    14.android:pivotY="50%" // 缩放轴点的y坐标
+    -->
