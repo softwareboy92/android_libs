@@ -96,6 +96,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_app_manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant_run_merged_manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javac" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint_jar" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_jni_libs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_manifests" />
@@ -181,6 +182,42 @@
     <orderEntry type="library" name="Gradle: com.squareup.okio:okio:1.15.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:adapter-rxjava2:2.6.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.collection:collection:1.0.0@jar" level="project" />
+    <orderEntry type="module" module-name="libimage" />
+    <orderEntry type="module" module-name="libdialog" />
+    <orderEntry type="module" module-name="libscan" />
+    <orderEntry type="module" module-name="libbanner" />
+    <orderEntry type="module" module-name="libsqlite" />
+    <orderEntry type="module" module-name="libmvp" />
+    <orderEntry type="module" module-name="libhttp" />
+    <orderEntry type="module" module-name="libutils" />
+    <orderEntry type="module" module-name="libsocket" />
+    <orderEntry type="module" module-name="libimage" />
+    <orderEntry type="module" module-name="libdialog" />
+    <orderEntry type="module" module-name="libscan" />
+    <orderEntry type="module" module-name="libbanner" />
+    <orderEntry type="module" module-name="libsqlite" />
+    <orderEntry type="module" module-name="libmvp" />
+    <orderEntry type="module" module-name="libhttp" />
+    <orderEntry type="module" module-name="libutils" />
+    <orderEntry type="module" module-name="libsocket" />
+    <orderEntry type="module" module-name="libimage" />
+    <orderEntry type="module" module-name="libdialog" />
+    <orderEntry type="module" module-name="libscan" />
+    <orderEntry type="module" module-name="libbanner" />
+    <orderEntry type="module" module-name="libsqlite" />
+    <orderEntry type="module" module-name="libmvp" />
+    <orderEntry type="module" module-name="libhttp" />
+    <orderEntry type="module" module-name="libutils" />
+    <orderEntry type="module" module-name="libsocket" />
+    <orderEntry type="module" module-name="libimage" />
+    <orderEntry type="module" module-name="libdialog" />
+    <orderEntry type="module" module-name="libscan" />
+    <orderEntry type="module" module-name="libbanner" />
+    <orderEntry type="module" module-name="libsqlite" />
+    <orderEntry type="module" module-name="libmvp" />
+    <orderEntry type="module" module-name="libhttp" />
+    <orderEntry type="module" module-name="libutils" />
+    <orderEntry type="module" module-name="libsocket" />
     <orderEntry type="module" module-name="libimage" />
     <orderEntry type="module" module-name="libdialog" />
     <orderEntry type="module" module-name="libscan" />

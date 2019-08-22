@@ -70,6 +70,9 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
             Intent intent = new Intent(this, CaptureActivity.class);
             startActivityForResult(intent, REQUEST_CODE);
         });
+
+
+
         findViewById(R.id.bottom).setOnClickListener(v -> {
             mPresenter.getVersion(this);
         });

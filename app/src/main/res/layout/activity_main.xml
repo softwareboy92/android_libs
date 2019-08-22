@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.lv.libmvp.weight.CustomScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFFFFFFF"
     android:fillViewport="true"
     android:fitsSystemWindows="true"
@@ -12,6 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_20"
         android:orientation="vertical">
 
         <TextView
@@ -141,7 +142,7 @@
                 android:id="@+id/image31"
                 android:layout_width="@dimen/dp_240"
                 android:layout_height="@dimen/dp_135"
-                android:transitionName="the image of transition"/>
+                android:transitionName="the image of transition" />
 
             <com.lv.libimage.progress.CircleProgressView
                 android:id="@+id/progressView1"
@@ -155,7 +156,7 @@
                 app:cpv_outerSize="1dp"
                 app:cpv_progressNormalColor="@android:color/transparent"
                 app:cpv_progressReachColor="#E5ffffff"
-                app:cpv_progressStyle="FillInnerArc"/>
+                app:cpv_progressStyle="FillInnerArc" />
         </RelativeLayout>
 
 
@@ -163,8 +164,8 @@
             android:id="@+id/recycleview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="none"
-            android:background="#FFFFFFFF" />
+            android:background="#FFFFFFFF"
+            android:scrollbars="none" />
 
     </LinearLayout>
 </com.lv.libmvp.weight.CustomScrollView>
