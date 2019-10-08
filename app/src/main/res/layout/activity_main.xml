@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_30"
             android:layout_marginRight="@dimen/dp_30"
-            android:text="scan_camare" />
+            android:text="启动扫一扫" />
 
         <Button
             android:id="@+id/bottom"
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_30"
             android:layout_marginRight="@dimen/dp_30"
-            android:text="BUTTON-1" />
+            android:text="获取数据版本号" />
 
         <Button
             android:id="@+id/hotcoins"
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_30"
             android:layout_marginRight="@dimen/dp_30"
-            android:text="BUTTON-2" />
+            android:text="获取货币类型" />
 
         <Button
             android:id="@+id/custom_dialog_01"
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_30"
             android:layout_marginRight="@dimen/dp_30"
-            android:text="custom_dialog_01" />
+            android:text="一个按钮的提示框" />
 
 
         <Button
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_30"
             android:layout_marginRight="@dimen/dp_30"
-            android:text="custom_dialog_02" />
+            android:text="底部弹出窗口" />
 
         <Button
             android:id="@+id/custom_dialog_03"
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_30"
             android:layout_marginRight="@dimen/dp_30"
-            android:text="custom_dialog_03" />
+            android:text="弹出输入提示框" />
 
         <Button
             android:id="@+id/database_quary"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_30"
             android:layout_marginRight="@dimen/dp_30"
-            android:text="database_quary" />
+            android:text="数据库查询所有数据" />
 
 
         <Button
