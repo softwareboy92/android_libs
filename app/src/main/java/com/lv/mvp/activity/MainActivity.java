@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.gson.Gson;
 import com.lv.libdialog.BottomPopupWindow;
 import com.lv.libdialog.EditDialog;
 import com.lv.libdialog.EnsureDialog;
@@ -33,6 +34,8 @@ import com.lv.mvp.contract.MainContract;
 import com.lv.mvp.model.HotCoinsResponse;
 import com.lv.mvp.model.Persion;
 import com.lv.mvp.presenter.MainPresenter;
+import com.monkey.libwallet.model.Wallet;
+import com.monkey.libwallet.utils.WalletUtils;
 
 
 import java.util.ArrayList;
@@ -71,7 +74,72 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
             startActivityForResult(intent, REQUEST_CODE);
         });
 
+        findViewById(R.id.createwallet).setOnClickListener(view -> {
+            new Thread(){
+                @Override
+                public void run() {
+                    super.run();
+                    try {
+                        Wallet wallet = WalletUtils.CreateWallet("001","123456");
+                        Gson gson = new Gson();
+                        Log.e("lvllvlvl", "initView: "+gson.toJson(wallet));
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
+        });
 
+        findViewById(R.id.import_prikey_wallet).setOnClickListener(view -> {
+            //私钥导入
+            new Thread(){
+                @Override
+                public void run() {
+                    super.run();
+                    try {
+                        Wallet wallet = WalletUtils.ImportPrikeyWallet("002","1d267989bdd05c612dd1d9f14b0b10b7ac7a80c83cb41519c5ba4038d72c2751","123456");
+                        Gson gson = new Gson();
+                        Log.e("lvllvlvl", "initView: "+gson.toJson(wallet));
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
+        });
+
+        findViewById(R.id.import_mnemci_wallet).setOnClickListener(view -> {
+            //助记词导入
+            new Thread(){
+                @Override
+                public void run() {
+                    super.run();
+                    try {
+                        Wallet wallet = WalletUtils.ImportMnemonicsWallet("003","frost kick face want carpet endorse jazz regret pole board almost maze","123456");
+                        Gson gson = new Gson();
+                        Log.e("lvllvlvl", "initView: "+gson.toJson(wallet));
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
+        });
+
+        findViewById(R.id.import_keystory_wallet).setOnClickListener(view -> {
+            //keystory导入
+            new Thread(){
+                @Override
+                public void run() {
+                    super.run();
+                    try {
+                        Wallet wallet = WalletUtils.ImportKeystoryWallet("004","{\"address\":\"504484bc58fc673ad31486e950ccdfeab8f81697\",\"crypto\":{\"cipher\":\"aes-128-ctr\",\"cipherparams\":{\"iv\":\"b667031a2aec1b6d0e795abb26808919\"},\"ciphertext\":\"19e3f15aa7a0a802ff0bcf53fc4b0731649cb89c108c569f9a581256f7cdd3ce\",\"kdf\":\"scrypt\",\"kdfparams\":{\"dklen\":32,\"n\":4096,\"p\":6,\"r\":8,\"salt\":\"f0746991f85138563a6f91844cc1cb829851364fcf47523af1318c70e7470c98\"},\"mac\":\"2188e062cdd21d8da8a031d2e3ca12be3def8989dabcad5777cc80a63282795b\"},\"id\":\"fd4d8295-78dd-4af4-a736-bfe866f2f2ef\",\"version\":3}","123456");
+                        Gson gson = new Gson();
+                        Log.e("lvllvlvl", "initView: "+gson.toJson(wallet));
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
+        });
 
         findViewById(R.id.bottom).setOnClickListener(v -> {
             mPresenter.getVersion(this);

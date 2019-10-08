@@ -99,6 +99,40 @@
             android:text="跳转到RecycleView" />
 
 
+        <Button
+            android:id="@+id/createwallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:text="创建钱包" />
+
+        <Button
+            android:id="@+id/import_prikey_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:text="私钥导入" />
+
+        <Button
+            android:id="@+id/import_mnemci_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:text="助记词导入" />
+
+        <Button
+            android:id="@+id/import_keystory_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:text="keystory导入" />
+
+
+
         <com.lv.libimage.view.GlideImageView
             android:id="@+id/glide_view01"
             android:layout_width="@dimen/dp_135"

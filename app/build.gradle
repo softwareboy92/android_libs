@@ -44,5 +44,6 @@ dependencies {
     implementation project(":libimage")
     implementation project(":libsqlite")
     implementation project(":libbanner")
+    implementation project(":libwallet")
 
 }
