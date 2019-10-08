@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/libsocket/libsocket.iml" filepath="$PROJECT_DIR$/libsocket/libsocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/libsqlite/libsqlite.iml" filepath="$PROJECT_DIR$/libsqlite/libsqlite.iml" />
       <module fileurl="file://$PROJECT_DIR$/libutils/libutils.iml" filepath="$PROJECT_DIR$/libutils/libutils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libwallet/libwallet.iml" filepath="$PROJECT_DIR$/libwallet/libwallet.iml" />
     </modules>
   </component>
 </project>
