@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.bumptech.glide:gifdecoder:4.9.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a022532b6aeffc1eb76b7cec3da62a99/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f6e1f3fef4659a43e010396b817632c/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a022532b6aeffc1eb76b7cec3da62a99/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a022532b6aeffc1eb76b7cec3da62a99/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f6e1f3fef4659a43e010396b817632c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f6e1f3fef4659a43e010396b817632c/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.squareup.leakcanary:leakcanary-android-no-op:1.6.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b67ced15a7003382e508a5b3cf6e933b/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b67ced15a7003382e508a5b3cf6e933b/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/55668fe2b85e8ee241595d07cb50904f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/55668fe2b85e8ee241595d07cb50904f/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-android-no-op/1.6.1/97277eb8b21bd511bb7f63e8a8ee3f404c23fbb9/leakcanary-android-no-op-1.6.1-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-android-no-op/1.6.1/2defc501ccd8a40fb4afd7cd983fc42dfb021e0/leakcanary-android-no-op-1.6.1-sources.jar!/" />
     </SOURCES>
