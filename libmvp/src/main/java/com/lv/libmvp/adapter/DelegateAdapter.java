@@ -24,6 +24,7 @@ import java.util.List;
 
 import static com.lv.libmvp.recycleview.Preconditions.checkNotNull;
 
+
 public class DelegateAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     private static final String TAG = DelegateAdapter.class.getSimpleName();

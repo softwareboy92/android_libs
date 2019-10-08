@@ -88,13 +88,12 @@ public class RecycleViewActivity extends BaseActivity<RecycleViewPresenter> impl
         mImages.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564642990384&di=009dd1ac656c13e9a9903792d1c37521&imgtype=0&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fe1fe9925bc315c60c9fcca4987b1cb134954772f.jpg");
         items.add(new Persion("WangWU", 0, 18, "2019年07月26日16:40:36",mImages));
 
-//        for (int i = 0; i < 5; i++) {
-//            items.add(new ListViewModel("Title" + i, "这里是内容" + i));
-//        }
-
         for (int i = 0; i < 5; i++) {
-            items.add(new Car("奥迪", "110100", "黑色"));
+            items.add(new ListViewModel("Title" + i, "这里是内容" + i));
         }
+
+        items.add(new Car("奥迪", "110100", "黑色"));
+
         mAdapter.setDatas(items);
         mAdapter.notifyDataSetChanged();
 

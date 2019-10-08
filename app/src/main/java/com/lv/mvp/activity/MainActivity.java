@@ -1,5 +1,6 @@
 package com.lv.mvp.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -20,6 +21,7 @@ import com.google.gson.Gson;
 import com.lv.libdialog.BottomPopupWindow;
 import com.lv.libdialog.EditDialog;
 import com.lv.libdialog.EnsureDialog;
+import com.lv.libhttp.utils.AndroidScheduler;
 import com.lv.libimage.progress.CircleProgressView;
 import com.lv.libimage.view.GlideImageView;
 import com.lv.libmvp.activity.BaseActivity;
@@ -41,9 +43,21 @@ import com.monkey.libwallet.utils.WalletUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
+import io.reactivex.schedulers.Schedulers;
+import rx.Subscriber;
+
 
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View, CommonViewHolder.onItemCommonClickListener {
 
+    private static final String TAG = "MainActivity";
     private RecyclerView recycleview;
     private MultiTypeAdapter mAdapter;
     private List<HotCoinsResponse> mList = new ArrayList<>();
@@ -64,6 +78,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         return R.color.white;
     }
 
+    @SuppressLint("CheckResult")
     @Override
     protected void initView(Bundle savedInstanceState) {
         TextView show_font = findViewById(R.id.show_font);
@@ -75,32 +90,35 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         });
 
         findViewById(R.id.createwallet).setOnClickListener(view -> {
-            new Thread(){
-                @Override
-                public void run() {
-                    super.run();
-                    try {
-                        Wallet wallet = WalletUtils.CreateWallet("001","123456");
-                        Gson gson = new Gson();
-                        Log.e("lvllvlvl", "initView: "+gson.toJson(wallet));
-                    }catch (Exception e){
-                        e.printStackTrace();
-                    }
-                }
-            }.start();
+
+
+
+//            new Thread() {
+//                @Override
+//                public void run() {
+//                    super.run();
+//                    try {
+//                        Wallet wallet = WalletUtils.CreateWallet("001", "123456");
+//                        Gson gson = new Gson();
+//                        Log.e("lvllvlvl", "initView: " + gson.toJson(wallet));
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }.start();
         });
 
         findViewById(R.id.import_prikey_wallet).setOnClickListener(view -> {
             //私钥导入
-            new Thread(){
+            new Thread() {
                 @Override
                 public void run() {
                     super.run();
                     try {
-                        Wallet wallet = WalletUtils.ImportPrikeyWallet("002","1d267989bdd05c612dd1d9f14b0b10b7ac7a80c83cb41519c5ba4038d72c2751","123456");
+                        Wallet wallet = WalletUtils.ImportPrikeyWallet("002", "1d267989bdd05c612dd1d9f14b0b10b7ac7a80c83cb41519c5ba4038d72c2751", "123456");
                         Gson gson = new Gson();
-                        Log.e("lvllvlvl", "initView: "+gson.toJson(wallet));
-                    }catch (Exception e){
+                        Log.e("lvllvlvl", "initView: " + gson.toJson(wallet));
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -109,15 +127,15 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
         findViewById(R.id.import_mnemci_wallet).setOnClickListener(view -> {
             //助记词导入
-            new Thread(){
+            new Thread() {
                 @Override
                 public void run() {
                     super.run();
                     try {
-                        Wallet wallet = WalletUtils.ImportMnemonicsWallet("003","frost kick face want carpet endorse jazz regret pole board almost maze","123456");
+                        Wallet wallet = WalletUtils.ImportMnemonicsWallet("003", "frost kick face want carpet endorse jazz regret pole board almost maze", "123456");
                         Gson gson = new Gson();
-                        Log.e("lvllvlvl", "initView: "+gson.toJson(wallet));
-                    }catch (Exception e){
+                        Log.e("lvllvlvl", "initView: " + gson.toJson(wallet));
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -126,15 +144,15 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
         findViewById(R.id.import_keystory_wallet).setOnClickListener(view -> {
             //keystory导入
-            new Thread(){
+            new Thread() {
                 @Override
                 public void run() {
                     super.run();
                     try {
-                        Wallet wallet = WalletUtils.ImportKeystoryWallet("004","{\"address\":\"504484bc58fc673ad31486e950ccdfeab8f81697\",\"crypto\":{\"cipher\":\"aes-128-ctr\",\"cipherparams\":{\"iv\":\"b667031a2aec1b6d0e795abb26808919\"},\"ciphertext\":\"19e3f15aa7a0a802ff0bcf53fc4b0731649cb89c108c569f9a581256f7cdd3ce\",\"kdf\":\"scrypt\",\"kdfparams\":{\"dklen\":32,\"n\":4096,\"p\":6,\"r\":8,\"salt\":\"f0746991f85138563a6f91844cc1cb829851364fcf47523af1318c70e7470c98\"},\"mac\":\"2188e062cdd21d8da8a031d2e3ca12be3def8989dabcad5777cc80a63282795b\"},\"id\":\"fd4d8295-78dd-4af4-a736-bfe866f2f2ef\",\"version\":3}","123456");
+                        Wallet wallet = WalletUtils.ImportKeystoryWallet("004", "{\"address\":\"504484bc58fc673ad31486e950ccdfeab8f81697\",\"crypto\":{\"cipher\":\"aes-128-ctr\",\"cipherparams\":{\"iv\":\"b667031a2aec1b6d0e795abb26808919\"},\"ciphertext\":\"19e3f15aa7a0a802ff0bcf53fc4b0731649cb89c108c569f9a581256f7cdd3ce\",\"kdf\":\"scrypt\",\"kdfparams\":{\"dklen\":32,\"n\":4096,\"p\":6,\"r\":8,\"salt\":\"f0746991f85138563a6f91844cc1cb829851364fcf47523af1318c70e7470c98\"},\"mac\":\"2188e062cdd21d8da8a031d2e3ca12be3def8989dabcad5777cc80a63282795b\"},\"id\":\"fd4d8295-78dd-4af4-a736-bfe866f2f2ef\",\"version\":3}", "123456");
                         Gson gson = new Gson();
-                        Log.e("lvllvlvl", "initView: "+gson.toJson(wallet));
-                    }catch (Exception e){
+                        Log.e("lvllvlvl", "initView: " + gson.toJson(wallet));
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -188,7 +206,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         });
         recycleview = findViewById(R.id.recycleview);
         recycleview.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-        MyGridLayoutManager layoutManager = new MyGridLayoutManager(this,10);
+        MyGridLayoutManager layoutManager = new MyGridLayoutManager(this, 10);
         layoutManager.setScrollEnabled(false);
         recycleview.setLayoutManager(layoutManager);
         mAdapter = new MultiTypeAdapter(this, mList, this);
@@ -231,17 +249,17 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         //todo 数据库创建及测试
         DatabaseUtils.initHelper(this, "user.db");
         //String userName, int sex, int age, String brithDay
-        Persion persion = new Persion("张三",0,18,"2019年07月26日16:40:36");
+        Persion persion = new Persion("张三", 0, 18, "2019年07月26日16:40:36");
         DatabaseUtils.getHelper().save(persion);
         findViewById(R.id.database_quary).setOnClickListener(view -> {
             List<Persion> persions = DatabaseUtils.getHelper().queryAll(Persion.class);
             for (Persion persion1 : persions) {
-                Log.e("lvlvlvl", "initView: "+ persion1.toString());
+                Log.e("lvlvlvl", "initView: " + persion1.toString());
             }
         });
 
         findViewById(R.id.custom_dialog_04).setOnClickListener(view -> {
-            startActivity(new Intent(this,RecycleViewActivity.class));
+            startActivity(new Intent(this, RecycleViewActivity.class));
         });
     }
 
