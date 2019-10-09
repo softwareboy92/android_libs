@@ -91,21 +91,19 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
         findViewById(R.id.createwallet).setOnClickListener(view -> {
 
-
-
-//            new Thread() {
-//                @Override
-//                public void run() {
-//                    super.run();
-//                    try {
-//                        Wallet wallet = WalletUtils.CreateWallet("001", "123456");
-//                        Gson gson = new Gson();
-//                        Log.e("lvllvlvl", "initView: " + gson.toJson(wallet));
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }.start();
+            new Thread() {
+                @Override
+                public void run() {
+                    super.run();
+                    try {
+                        Wallet wallet = WalletUtils.CreateWallet("001", "123456");
+                        Gson gson = new Gson();
+                        Log.e("lvllvlvl", "initView: " + gson.toJson(wallet));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
         });
 
         findViewById(R.id.import_prikey_wallet).setOnClickListener(view -> {
