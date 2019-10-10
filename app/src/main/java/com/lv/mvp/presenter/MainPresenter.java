@@ -20,6 +20,7 @@ public class MainPresenter extends BasePresenter<MainContract.View> implements M
         if (mView != null && checkNet(activity)) {
             mView.showNoNet();
             return;
+
         }
         mView.showLoading();
         Loader.getLoader().getAppVersion()

@@ -42,6 +42,7 @@ import com.monkey.libwallet.utils.WalletUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
@@ -81,12 +82,15 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     @SuppressLint("CheckResult")
     @Override
     protected void initView(Bundle savedInstanceState) {
+        dialogLoadding.setMessage("加载中");
+
         TextView show_font = findViewById(R.id.show_font);
         FontSetting.setFont(this, show_font, "fonts/苹方黑体-中粗-简.ttf");
         findViewById(R.id.scan_camare).setOnClickListener(view -> {
             //启动相机。然后返回相机扫描结果
-            Intent intent = new Intent(this, CaptureActivity.class);
-            startActivityForResult(intent, REQUEST_CODE);
+//            Intent intent = new Intent(this, CaptureActivity.class);
+//            startActivityForResult(intent, REQUEST_CODE);
+            sendMsg(1,5000);
         });
 
         findViewById(R.id.createwallet).setOnClickListener(view -> {
@@ -158,6 +162,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         });
 
         findViewById(R.id.bottom).setOnClickListener(v -> {
+            //todo 第一个接口
             mPresenter.getVersion(this);
         });
         findViewById(R.id.hotcoins).setOnClickListener(view -> {
@@ -212,6 +217,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
         recycleview.setAdapter(mAdapter);
         mPresenter.getHotCoins(this);
+
         progressView1 = findViewById(R.id.progressView1);
         image31 = findViewById(R.id.image31);
         glide_view01 = findViewById(R.id.glide_view01);
@@ -290,6 +296,22 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     @Override
     public void onItemLongClickListener(int position) {
 
+    }
+
+    protected void msgManagement(int what){
+        Log.e(TAG, "msgManagement: "+what);
+    }
+
+    /**
+     * 发送延迟消息
+     * @param what
+     * @param delayMillis
+     */
+    public void sendMsg(int what,long delayMillis){
+        Observable.timer(delayMillis, TimeUnit.MILLISECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnComplete(()->msgManagement(what))
+                .subscribe();
     }
 
     @Override

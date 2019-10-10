@@ -158,6 +158,7 @@
     <orderEntry type="library" name="Gradle: com.trello.rxlifecycle2:rxlifecycle-components:2.2.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat:1.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.cardview:cardview:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.trello.rxlifecycle2:rxlifecycle-android:2.2.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.recyclerview:recyclerview:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.bumptech.glide:glide:4.9.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.fragment:fragment:1.1.0@aar" level="project" />
@@ -178,7 +179,6 @@
     <orderEntry type="library" name="Gradle: androidx.core:core:1.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.cursoradapter:cursoradapter:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.versionedparcelable:versionedparcelable:1.1.0@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.trello.rxlifecycle2:rxlifecycle-android:2.2.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.bumptech.glide:gifdecoder:4.9.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.interpolator:interpolator:1.0.0@aar" level="project" />
@@ -194,36 +194,6 @@
     <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxandroid:2.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-android-no-op:1.6.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: me.jessyan:autosize:1.1.1@aar" level="project" />
-    <orderEntry type="module" module-name="libimage" />
-    <orderEntry type="module" module-name="libmvp" />
-    <orderEntry type="module" module-name="libwallet" />
-    <orderEntry type="module" module-name="libhttp" />
-    <orderEntry type="module" module-name="libutils" />
-    <orderEntry type="module" module-name="libscan" />
-    <orderEntry type="module" module-name="libdialog" />
-    <orderEntry type="module" module-name="libsocket" />
-    <orderEntry type="module" module-name="libsqlite" />
-    <orderEntry type="module" module-name="libbanner" />
-    <orderEntry type="module" module-name="libimage" />
-    <orderEntry type="module" module-name="libmvp" />
-    <orderEntry type="module" module-name="libwallet" />
-    <orderEntry type="module" module-name="libhttp" />
-    <orderEntry type="module" module-name="libutils" />
-    <orderEntry type="module" module-name="libscan" />
-    <orderEntry type="module" module-name="libdialog" />
-    <orderEntry type="module" module-name="libsocket" />
-    <orderEntry type="module" module-name="libsqlite" />
-    <orderEntry type="module" module-name="libbanner" />
-    <orderEntry type="module" module-name="libimage" />
-    <orderEntry type="module" module-name="libmvp" />
-    <orderEntry type="module" module-name="libwallet" />
-    <orderEntry type="module" module-name="libhttp" />
-    <orderEntry type="module" module-name="libutils" />
-    <orderEntry type="module" module-name="libscan" />
-    <orderEntry type="module" module-name="libdialog" />
-    <orderEntry type="module" module-name="libsocket" />
-    <orderEntry type="module" module-name="libsqlite" />
-    <orderEntry type="module" module-name="libbanner" />
     <orderEntry type="module" module-name="libimage" />
     <orderEntry type="module" module-name="libmvp" />
     <orderEntry type="module" module-name="libwallet" />

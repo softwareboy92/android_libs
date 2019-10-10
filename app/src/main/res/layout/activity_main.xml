@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_30"
             android:layout_marginRight="@dimen/dp_30"
-            android:text="启动扫一扫" />
+            android:text="Rxjava发送延迟消息" />
 
         <Button
             android:id="@+id/bottom"

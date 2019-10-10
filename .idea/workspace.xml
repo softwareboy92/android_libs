@@ -72,9 +72,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lv/mvp/activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lv/mvp/activity/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/lv/mvp/presenter/MainPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/lv/mvp/presenter/MainPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/activity/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/activity/BaseActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,15 +145,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/lv/mvp/activity/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="292" column="5" lean-forward="true" selection-start-line="292" selection-start-column="5" selection-end-line="292" selection-end-column="5" />
-              <folding>
-                <element signature="e#3357#3845#0" expanded="true" />
-                <element signature="e#3844#3845#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="470">
+              <caret line="85" column="12" lean-forward="true" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/activity/BaseActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="205" column="37" selection-start-line="205" selection-start-column="37" selection-end-line="205" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libmvp/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="41" column="32" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/weight/DialogLoadding.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -188,6 +212,9 @@
       <find>toXScale</find>
       <find>bottom</find>
       <find>builder</find>
+      <find>Message</find>
+      <find>mPresenter</find>
+      <find>com.trello.rxlifecycle2:rxlifecycle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,7 +223,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/recycle/OnItemLongClickListener.java" />
         <option value="$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/recycle/OnItemClickListener.java" />
         <option value="$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/weight/VHolder.java" />
         <option value="$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/recycle/ChainOneToMany.java" />
@@ -225,7 +251,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_header.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/lv/mvp/model/Persion.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/lv/mvp/holder/HeadlerViewHolder.java" />
-        <option value="$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/activity/BaseActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_recycleview.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/lv/mvp/activity/MvpActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/lv/mvp/adapter/MyGridLayoutManager.java" />
@@ -242,17 +267,19 @@
         <option value="$PROJECT_DIR$/libwallet/src/main/java/com/monkey/libwallet/utils/Utils.java" />
         <option value="$PROJECT_DIR$/libwallet/src/main/java/com/monkey/libwallet/utils/WalletUtils.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/adapter/DelegateAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/lv/mvp/activity/RecycleViewActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_01.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/lv/mvp/presenter/MainPresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/lv/mvp/activity/MainActivity.java" />
+        <option value="$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/activity/BaseActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="24" />
-    <option name="y" value="-975" />
+    <option name="x" value="-20" />
+    <option name="y" value="-1008" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -557,7 +584,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="24" y="-975" width="1440" height="877" extended-state="0" />
+    <frame x="-20" y="-1008" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
@@ -624,13 +651,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/libbanner/src/main/res/values/attr.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.cardview/cardview/1.0.0/c9f3ce7ca74ad2c978230f4094ba6804c5166f9c/cardview-1.0.0-sources.jar!/androidx/cardview/widget/CardView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -765,13 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="57" column="27" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/activity/BaseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -921,32 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/lv/mvp/presenter/MainPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="94" column="47" lean-forward="true" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
-          <folding>
-            <element signature="e#1511#1525#0" expanded="true" />
-            <element signature="e#3931#3945#0" expanded="true" />
-            <element signature="e#3985#3999#0" expanded="true" />
-            <element signature="e#4230#4244#0" expanded="true" />
-            <element signature="e#4284#4298#0" expanded="true" />
-            <element signature="e#4529#4543#0" expanded="true" />
-            <element signature="e#4583#4597#0" expanded="true" />
-            <element signature="e#4828#4842#0" expanded="true" />
-            <element signature="e#4882#4896#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/lv/mvp/http/ApiService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -1033,20 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libmvp/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.2.4/a4e2280742c2f7935d69f0deff2acea315010cf7/rxjava-1.2.4-sources.jar!/rx/Observable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -1064,14 +1037,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <element signature="e#1457#1471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/lv/mvp/presenter/MainPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-245">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/weight/DialogLoadding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/lv/mvp/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="292" column="5" lean-forward="true" selection-start-line="292" selection-start-column="5" selection-end-line="292" selection-end-column="5" />
-          <folding>
-            <element signature="e#3357#3845#0" expanded="true" />
-            <element signature="e#3844#3845#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="470">
+          <caret line="85" column="12" lean-forward="true" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libmvp/src/main/java/com/lv/libmvp/activity/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="205" column="37" selection-start-line="205" selection-start-column="37" selection-end-line="205" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libmvp/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="41" column="32" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="32" />
         </state>
       </provider>
     </entry>

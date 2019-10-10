@@ -46,7 +46,7 @@ public abstract class BaseActivity<P extends BaseContract.BasePresenter>
 
     protected Activity mContext;
     protected P mPresenter;
-    private DialogLoadding dialogLoadding;
+    public DialogLoadding dialogLoadding;
 
     private BroadcastReceiver receiveBroadCast;
 
@@ -66,6 +66,7 @@ public abstract class BaseActivity<P extends BaseContract.BasePresenter>
         mPresenter = initPresenter();
         mContext = this;
         attachView();
+        dialogLoadding = new DialogLoadding(this);
         initView(savedInstanceState);
 
     }
