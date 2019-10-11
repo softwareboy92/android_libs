@@ -48,9 +48,7 @@ public class CustomScrollView extends ScrollView {
         super(context, attrs, defStyle);
     }
 
-    public interface OnReferScrollViewListener {
-        void OnReferListener();
-    }
+
 
     @SuppressLint("MissingSuperCall")
     @Override
