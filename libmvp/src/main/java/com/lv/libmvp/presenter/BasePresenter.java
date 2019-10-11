@@ -35,7 +35,9 @@ public class BasePresenter<T extends BaseContract.BaseView> implements BaseContr
         this.mTWeakReference = new WeakReference<T>(view);
 
         //用代理对象，动态代理
-        mView = (T) Proxy.newProxyInstance(view.getClass().getClassLoader(), view.getClass().getInterfaces(), new InvocationHandler() {
+        mView = (T) Proxy.newProxyInstance(view.getClass().getClassLoader(),
+                view.getClass().getInterfaces(),
+                new InvocationHandler() {
             @Override
             public Object invoke(Object o, Method method, Object[] objects) throws Throwable {
                 if (mTWeakReference == null && mTWeakReference.get()==null){
