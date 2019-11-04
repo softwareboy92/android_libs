@@ -17,6 +17,10 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.fm.openinstall.OpenInstall;
+import com.fm.openinstall.listener.AppInstallAdapter;
+import com.fm.openinstall.listener.AppWakeUpAdapter;
+import com.fm.openinstall.model.AppData;
 import com.google.gson.Gson;
 import com.lv.libdialog.BottomPopupWindow;
 import com.lv.libdialog.EditDialog;
@@ -146,19 +150,21 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
         findViewById(R.id.import_keystory_wallet).setOnClickListener(view -> {
             //keystory导入
-            new Thread() {
-                @Override
-                public void run() {
-                    super.run();
-                    try {
-                        Wallet wallet = WalletUtils.ImportKeystoryWallet("004", "{\"address\":\"504484bc58fc673ad31486e950ccdfeab8f81697\",\"crypto\":{\"cipher\":\"aes-128-ctr\",\"cipherparams\":{\"iv\":\"b667031a2aec1b6d0e795abb26808919\"},\"ciphertext\":\"19e3f15aa7a0a802ff0bcf53fc4b0731649cb89c108c569f9a581256f7cdd3ce\",\"kdf\":\"scrypt\",\"kdfparams\":{\"dklen\":32,\"n\":4096,\"p\":6,\"r\":8,\"salt\":\"f0746991f85138563a6f91844cc1cb829851364fcf47523af1318c70e7470c98\"},\"mac\":\"2188e062cdd21d8da8a031d2e3ca12be3def8989dabcad5777cc80a63282795b\"},\"id\":\"fd4d8295-78dd-4af4-a736-bfe866f2f2ef\",\"version\":3}", "123456");
-                        Gson gson = new Gson();
-                        Log.e("lvllvlvl", "initView: " + gson.toJson(wallet));
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }.start();
+//            new Thread() {
+//                @Override
+//                public void run() {
+//                    super.run();
+//                    try {
+//                        Wallet wallet = WalletUtils.ImportKeystoryWallet("004", "{\"address\":\"504484bc58fc673ad31486e950ccdfeab8f81697\",\"crypto\":{\"cipher\":\"aes-128-ctr\",\"cipherparams\":{\"iv\":\"b667031a2aec1b6d0e795abb26808919\"},\"ciphertext\":\"19e3f15aa7a0a802ff0bcf53fc4b0731649cb89c108c569f9a581256f7cdd3ce\",\"kdf\":\"scrypt\",\"kdfparams\":{\"dklen\":32,\"n\":4096,\"p\":6,\"r\":8,\"salt\":\"f0746991f85138563a6f91844cc1cb829851364fcf47523af1318c70e7470c98\"},\"mac\":\"2188e062cdd21d8da8a031d2e3ca12be3def8989dabcad5777cc80a63282795b\"},\"id\":\"fd4d8295-78dd-4af4-a736-bfe866f2f2ef\",\"version\":3}", "123456");
+//                        Gson gson = new Gson();
+//                        Log.e("lvllvlvl", "initView: " + gson.toJson(wallet));
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }.start();
+            OpenInstall.reportRegister();
+
         });
 
         findViewById(R.id.bottom).setOnClickListener(v -> {
@@ -265,6 +271,48 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
         findViewById(R.id.custom_dialog_04).setOnClickListener(view -> {
             startActivity(new Intent(this, RecycleViewActivity.class));
         });
+
+
+        //
+        //获取唤醒参数
+        OpenInstall.getWakeUp(getIntent(), wakeUpAdapter);
+
+        OpenInstall.getInstall(new AppInstallAdapter() {
+            @Override
+            public void onInstall(AppData appData) {
+                //获取渠道数据
+                String channelCode = appData.getChannel();
+                //获取自定义数据
+                String bindData = appData.getData();
+                Log.d("OpenInstall", "getInstall : installData = " + appData.toString());
+            }
+        });
+
+    }
+
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        // 此处要调用，否则App在后台运行时，会无法截获
+        OpenInstall.getWakeUp(intent, wakeUpAdapter);
+    }
+
+    AppWakeUpAdapter wakeUpAdapter = new AppWakeUpAdapter() {
+        @Override
+        public void onWakeUp(AppData appData) {
+            //获取渠道数据
+            String channelCode = appData.getChannel();
+            //获取绑定数据
+            String bindData = appData.getData();
+            Log.d("OpenInstall", "getWakeUp : wakeupData = " + appData.toString());
+        }
+    };
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        wakeUpAdapter = null;
     }
 
     @Override

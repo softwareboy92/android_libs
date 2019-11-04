@@ -129,7 +129,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_30"
             android:layout_marginRight="@dimen/dp_30"
-            android:text="keystory导入" />
+            android:text="注册成功" />
 
 
 

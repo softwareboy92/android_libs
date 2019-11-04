@@ -21,10 +21,22 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
 
+        <meta-data
+            android:name="com.openinstall.APP_KEY"
+            android:value="ima52n"/>
+        <!--如果唤醒页面和启动页是同一Activity，则AndroidManifest.xml的配置如下-->
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="ima52n"/>
             </intent-filter>
         </activity>
 
