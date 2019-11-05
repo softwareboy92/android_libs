@@ -1,1 +1,1 @@
-include ':app', ':libhttp', ':libmvp', ':libutils', ':libscan', ':libdialog', ':libsocket', ':libimage', ':libsqlite', ':libbanner', ':libwallet'
+include ':app', ':libhttp', ':libmvp', ':libutils', ':libscan', ':libdialog', ':libsocket', ':libimage', ':libsqlite', ':libbanner', ':libwallet', ':libvideo'

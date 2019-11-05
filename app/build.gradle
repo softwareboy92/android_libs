@@ -42,4 +42,5 @@ dependencies {
     implementation project(':libbanner')
     implementation project(':libwallet')
     implementation files('libs/OpenInstall_v2.3.0.jar')
+    implementation project(':libvideo')
 }

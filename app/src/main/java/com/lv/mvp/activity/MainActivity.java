@@ -167,6 +167,10 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
 
         });
 
+        findViewById(R.id.btn_video).setOnClickListener(v->{
+            startActivity(new Intent(this,VideoActivity.class));
+        });
+
         findViewById(R.id.bottom).setOnClickListener(v -> {
             //todo 第一个接口
             mPresenter.getVersion(this);

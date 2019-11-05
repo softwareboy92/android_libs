@@ -26,6 +26,8 @@ import com.lv.mvp.model.ListViewModel;
 import com.lv.mvp.model.Persion;
 import com.lv.mvp.presenter.RecycleViewPresenter;
 
+import org.salient.artplayer.MediaPlayerManager;
+
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +38,7 @@ import java.util.List;
  *
  * @param
  **/
+@SuppressWarnings("all")
 public class RecycleViewActivity extends BaseActivity<RecycleViewPresenter> implements RecycleViewContract.View {
 
 
@@ -78,7 +81,6 @@ public class RecycleViewActivity extends BaseActivity<RecycleViewPresenter> impl
                 .bind(Persion.class, new HeadlerViewHolder(weakReference.get()))
                 .bind(ListViewModel.class, new CostomViewHolder(weakReference.get()))
                 .bind(Car.class, new FoolerViewHolder(weakReference.get()))
-//                .bind(TypeVo.class,new TypeItemView(weakReference.get()))
                 .build();
         mRecyclerView.setAdapter(mAdapter);
 
@@ -88,9 +90,27 @@ public class RecycleViewActivity extends BaseActivity<RecycleViewPresenter> impl
         mImages.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1564642990384&di=009dd1ac656c13e9a9903792d1c37521&imgtype=0&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fe1fe9925bc315c60c9fcca4987b1cb134954772f.jpg");
         items.add(new Persion("WangWU", 0, 18, "2019年07月26日16:40:36",mImages));
 
-        for (int i = 0; i < 5; i++) {
-            items.add(new ListViewModel("Title" + i, "这里是内容" + i));
-        }
+
+        //视频Video1
+        items.add(new ListViewModel("http://v9-dy.ixigua.com/743ffe9e501c5dac59ac90c1d06c67c1/5dc13e27/video/m/22093c415449c914054a64cb836f97fbf281163d3cd3000048db5f58267e/?a=1128&br=918&cr=0&cs=0&dr=0&ds=3&er=&l=20191105161707010155019091746364&lr=aweme&qs=0&rc=amY4dm1mc2Y8cDMzO2kzM0ApaDk4ZDY2M2RpN2RmZDU7O2dgb29uL2cubGlfLS02LS9zczQtNTRhMDBhYDFgNWJfYzI6Yw%3D%3D",
+                "https://p9.pstatp.com/large/tos-cn-p-0015/b3822bb8323c403fbff054ceeddcdd6b_1571462928.jpg"));
+        //视频Video2
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2018/06/27/mp4/180627094726195356.mp4",
+                "https://p3.pstatp.com/large/tos-cn-p-0015/76ad7b717faa413bbab22998ba19d029.jpg"));
+        //视频Video3
+        items.add(new ListViewModel("https://aweme.snssdk.com/aweme/v1/playwm/?s_vid=93f1b41336a8b7a442dbf1c29c6bbc5693230f09b1f3912eba20ece509238434bb569cad1a0331250fa07a5d6652f9388faa748bc40ea49d0577c2645700050e&line=0",
+                "https://p1.pstatp.com/large/tos-cn-p-0015/034e0f09a5524344aefa474a51ce4fc3_1572692772.jpg"));
+        //视频Video4
+        items.add(new ListViewModel("https://aweme.snssdk.com/aweme/v1/playwm/?s_vid=93f1b41336a8b7a442dbf1c29c6bbc562036dd60d437e06300f3c3176dfbed74ad6b27d32b3514e9806ca4128d8c3c3bba7569c767ace5a45bbca7cd8921fab9&line=0",
+                "https://p1.pstatp.com/large/tos-cn-p-0015/67ed2530cbd645fab9d7c131f4c95128_1572829804.jpg"));
+        //视频Video5
+        items.add(new ListViewModel("https://aweme.snssdk.com/aweme/v1/playwm/?s_vid=93f1b41336a8b7a442dbf1c29c6bbc56bf95f6cca9500dcaa10ac0b2d827fee1bed35e59d473f117bc972a969b8fe4cc76207d997f179d364b3e238a586d6bef&line=0",
+                "https://p1.pstatp.com/large/tos-cn-p-0015/b3d93f7dcdb147afb0c48e68f8c337b5.jpg"));
+
+        //视频Video6
+        items.add(new ListViewModel("https://aweme.snssdk.com/aweme/v1/playwm/?s_vid=93f1b41336a8b7a442dbf1c29c6bbc5676a3012c3fcf62f71cd282271feeaa47b957bba0d9437e1adadd890b908119d149787d413d9d8197d8bc2bcbeedad52d&line=0",
+                "https://p1.pstatp.com/large/tos-cn-p-0015/8137868ff7ea4dd99b5c6158cbe61597.jpg"));
+
 
         items.add(new Car("奥迪", "110100", "黑色"));
 
@@ -113,4 +133,27 @@ public class RecycleViewActivity extends BaseActivity<RecycleViewPresenter> impl
     protected void refershDatas(Context context, Intent intent) {
 
     }
+
+    @Override
+    public void onBackPressed() {
+        if (MediaPlayerManager.instance().backPress()) {
+            return;
+        }
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MediaPlayerManager.instance().pause();
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        MediaPlayerManager.instance().releasePlayerAndView(this);
+    }
+
+
 }

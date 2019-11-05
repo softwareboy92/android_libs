@@ -195,10 +195,21 @@
     <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxandroid:2.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-android-no-op:1.6.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: me.jessyan:autosize:1.1.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: org.salient.artvideoplayer:artplayer-java:0.7.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: org.salient.artvideoplayer:artplayer-ui:0.7.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: org.salient.artvideoplayer:artplayer-exo:0.7.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer:2.8.3@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-core:2.8.3@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-dash:2.8.3@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-hls:2.8.3@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-smoothstreaming:2.8.3@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-ui:2.8.3@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.exoplayer:extension-rtmp:2.8.3@aar" level="project" />
     <orderEntry type="module" module-name="libimage" />
     <orderEntry type="module" module-name="libmvp" />
     <orderEntry type="module" module-name="libwallet" />
     <orderEntry type="module" module-name="libhttp" />
+    <orderEntry type="module" module-name="libvideo" />
     <orderEntry type="module" module-name="libutils" />
     <orderEntry type="module" module-name="libscan" />
     <orderEntry type="module" module-name="libdialog" />
