@@ -9,8 +9,29 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_200" />
 
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_10"
-        android:background="@color/white" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:text="的见覅减肥的卡洛斯家咖啡馆"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_news_context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:text="仓位少了，价格没变"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+
+    </LinearLayout>
 </LinearLayout>

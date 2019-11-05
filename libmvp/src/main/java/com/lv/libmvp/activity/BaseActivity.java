@@ -76,15 +76,10 @@ public abstract class BaseActivity<P extends BaseContract.BasePresenter>
 
         } else {
             ImmersionBar.with(this)
-                    .transparentStatusBar()  //透明状态栏，不写默认透明色
-                    .transparentNavigationBar()  //透明导航栏，不写默认黑色(设置此方法，fullScreen()方法自动为true)
-                    .transparentBar()
                     .statusBarColor(id)
-                    .statusBarDarkFont(true)
-                    .fullScreen(true)
                     .fitsSystemWindows(true)
                     .keyboardEnable(true)
-                    .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
+                    .statusBarColor(R.color.colorBlack)
                     .init();
         }
     }

@@ -91,25 +91,30 @@ public class RecycleViewActivity extends BaseActivity<RecycleViewPresenter> impl
         items.add(new Persion("WangWU", 0, 18, "2019年07月26日16:40:36",mImages));
 
 
-        //视频Video1
-        items.add(new ListViewModel("http://v9-dy.ixigua.com/743ffe9e501c5dac59ac90c1d06c67c1/5dc13e27/video/m/22093c415449c914054a64cb836f97fbf281163d3cd3000048db5f58267e/?a=1128&br=918&cr=0&cs=0&dr=0&ds=3&er=&l=20191105161707010155019091746364&lr=aweme&qs=0&rc=amY4dm1mc2Y8cDMzO2kzM0ApaDk4ZDY2M2RpN2RmZDU7O2dgb29uL2cubGlfLS02LS9zczQtNTRhMDBhYDFgNWJfYzI6Yw%3D%3D",
-                "https://p9.pstatp.com/large/tos-cn-p-0015/b3822bb8323c403fbff054ceeddcdd6b_1571462928.jpg"));
-        //视频Video2
-        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2018/06/27/mp4/180627094726195356.mp4",
-                "https://p3.pstatp.com/large/tos-cn-p-0015/76ad7b717faa413bbab22998ba19d029.jpg"));
-        //视频Video3
-        items.add(new ListViewModel("https://aweme.snssdk.com/aweme/v1/playwm/?s_vid=93f1b41336a8b7a442dbf1c29c6bbc5693230f09b1f3912eba20ece509238434bb569cad1a0331250fa07a5d6652f9388faa748bc40ea49d0577c2645700050e&line=0",
-                "https://p1.pstatp.com/large/tos-cn-p-0015/034e0f09a5524344aefa474a51ce4fc3_1572692772.jpg"));
-        //视频Video4
-        items.add(new ListViewModel("https://aweme.snssdk.com/aweme/v1/playwm/?s_vid=93f1b41336a8b7a442dbf1c29c6bbc562036dd60d437e06300f3c3176dfbed74ad6b27d32b3514e9806ca4128d8c3c3bba7569c767ace5a45bbca7cd8921fab9&line=0",
-                "https://p1.pstatp.com/large/tos-cn-p-0015/67ed2530cbd645fab9d7c131f4c95128_1572829804.jpg"));
-        //视频Video5
-        items.add(new ListViewModel("https://aweme.snssdk.com/aweme/v1/playwm/?s_vid=93f1b41336a8b7a442dbf1c29c6bbc56bf95f6cca9500dcaa10ac0b2d827fee1bed35e59d473f117bc972a969b8fe4cc76207d997f179d364b3e238a586d6bef&line=0",
-                "https://p1.pstatp.com/large/tos-cn-p-0015/b3d93f7dcdb147afb0c48e68f8c337b5.jpg"));
+        //视频Video1 驯龙高手
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572960755306&di=f1f3dd12c04aae89bbcca7613d33c5a2&imgtype=0&src=http%3A%2F%2Fwww.dzwww.com%2Fyule%2Fyulezhuanti%2Fmtcbg%2F201408%2FW020140814296178978164.jpg",
+                "有人听前面猜出来了吗？",
+                "在抖音，记录美好生活#"));
+        //视频Video2 天地对决
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/18/mp4/190318231014076505.mp4",
+                "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2769403760,1422465498&fm=26&gp=0.jpg",
+                "你真是个可爱又浪漫的麻烦",
+                "在抖音，记录美好生活#"));
+        //视频Video紧急救援
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/21/mp4/190321153853126488.mp4",
+                "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2872500312,2890677947&fm=26&gp=0.jpg",
+                "我不要做胆小鬼，我想看到你点的小心心",
+                "在抖音，记录美好生活#"));
+        //视频Video 玩具总动员
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/19/mp4/190319222227698228.mp4",
+                "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4197932224,1694423239&fm=26&gp=0.jpg",
+                "女朋友演绎女孩子该如何正确的发出笑声",
+                "女朋友演绎女孩子该如何正确的发出笑声"));
+        //视频Video 叶问4
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/19/mp4/190319212559089721.mp4",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572960631985&di=c0ad335ec056586391714c0516572d74&imgtype=jpg&src=http%3A%2F%2Fphotocdn.sohu.com%2F20160304%2Fmp61908174_1457088690323_29.jpeg","中国的消费力已经在改变世界 ","中国的消费力已经在改变世界 "));
 
-        //视频Video6
-        items.add(new ListViewModel("https://aweme.snssdk.com/aweme/v1/playwm/?s_vid=93f1b41336a8b7a442dbf1c29c6bbc5676a3012c3fcf62f71cd282271feeaa47b957bba0d9437e1adadd890b908119d149787d413d9d8197d8bc2bcbeedad52d&line=0",
-                "https://p1.pstatp.com/large/tos-cn-p-0015/8137868ff7ea4dd99b5c6158cbe61597.jpg"));
 
 
         items.add(new Car("奥迪", "110100", "黑色"));

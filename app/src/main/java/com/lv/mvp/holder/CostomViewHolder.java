@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
@@ -46,7 +47,7 @@ public class CostomViewHolder extends AbsItemHolder<ListViewModel, CostomViewHol
 
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, @NonNull ListViewModel item) {
-        holder.mVideoView.setUp(item.getTitle(),VideoView.WindowType.LIST);
+        holder.mVideoView.setUp(item.getTitle(), VideoView.WindowType.LIST);
         holder.mVideoView.setControlPanel(new ControlPanel(mContext));
         MediaPlayerManager.instance().setMediaPlayer(new ExoPlayer(mContext));
 
@@ -54,6 +55,8 @@ public class CostomViewHolder extends AbsItemHolder<ListViewModel, CostomViewHol
         ImageView coverView = ((ControlPanel) holder.mVideoView.getControlPanel()).findViewById(R.id.video_cover);
         Glide.with(holder.mVideoView.getContext()).load(item.getContract()).into(coverView);
 
+        holder.mTextViewTitle.setText(item.getNewsTitle());
+        holder.mTextViewContent.setText(item.getNewsContent());
 
     }
 
@@ -72,10 +75,14 @@ public class CostomViewHolder extends AbsItemHolder<ListViewModel, CostomViewHol
     static class ViewHolder extends AbsHolder {
 
         private VideoView mVideoView;
+        private TextView mTextViewTitle;
+        private TextView mTextViewContent;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             mVideoView = itemView.findViewById(R.id.item_video_view);
+            mTextViewTitle = itemView.findViewById(R.id.item_news_title);
+            mTextViewContent = itemView.findViewById(R.id.item_news_context);
         }
     }
 }
