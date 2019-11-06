@@ -77,6 +77,10 @@ public class RecycleViewActivity extends BaseActivity<RecycleViewPresenter> impl
 //        mAdapter.setData(mList);
 //        mAdapter.notifyDataSetChanged();
 
+        findViewById(R.id.back_ibtn).setOnClickListener(v -> {
+            finish();
+        });
+
         mAdapter = new DelegateAdapter.Builder<>()
                 .bind(Persion.class, new HeadlerViewHolder(weakReference.get()))
                 .bind(ListViewModel.class, new CostomViewHolder(weakReference.get()))
@@ -113,6 +117,37 @@ public class RecycleViewActivity extends BaseActivity<RecycleViewPresenter> impl
                 "女朋友演绎女孩子该如何正确的发出笑声"));
         //视频Video 叶问4
         items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/19/mp4/190319212559089721.mp4",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572960631985&di=c0ad335ec056586391714c0516572d74&imgtype=jpg&src=http%3A%2F%2Fphotocdn.sohu.com%2F20160304%2Fmp61908174_1457088690323_29.jpeg","中国的消费力已经在改变世界 ","中国的消费力已经在改变世界 "));
+
+        //5
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/18/mp4/190318214226685784.mp4",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572960631985&di=c0ad335ec056586391714c0516572d74&imgtype=jpg&src=http%3A%2F%2Fphotocdn.sohu.com%2F20160304%2Fmp61908174_1457088690323_29.jpeg","中国的消费力已经在改变世界 ","中国的消费力已经在改变世界 "));
+        //6
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/19/mp4/190319104618910544.mp4",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572960631985&di=c0ad335ec056586391714c0516572d74&imgtype=jpg&src=http%3A%2F%2Fphotocdn.sohu.com%2F20160304%2Fmp61908174_1457088690323_29.jpeg","中国的消费力已经在改变世界 ","中国的消费力已经在改变世界 "));
+
+        //7
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/19/mp4/190319125415785691.mp4",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572960631985&di=c0ad335ec056586391714c0516572d74&imgtype=jpg&src=http%3A%2F%2Fphotocdn.sohu.com%2F20160304%2Fmp61908174_1457088690323_29.jpeg","中国的消费力已经在改变世界 ","中国的消费力已经在改变世界 "));
+
+        //8
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/19/mp4/190317150237409904.mp4",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572960631985&di=c0ad335ec056586391714c0516572d74&imgtype=jpg&src=http%3A%2F%2Fphotocdn.sohu.com%2F20160304%2Fmp61908174_1457088690323_29.jpeg","中国的消费力已经在改变世界 ","中国的消费力已经在改变世界 "));
+
+        //9
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/19/mp4/190314223540373995.mp4",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572960631985&di=c0ad335ec056586391714c0516572d74&imgtype=jpg&src=http%3A%2F%2Fphotocdn.sohu.com%2F20160304%2Fmp61908174_1457088690323_29.jpeg","中国的消费力已经在改变世界 ","中国的消费力已经在改变世界 "));
+
+        //10
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/19/mp4/190314102306987969.mp4",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572960631985&di=c0ad335ec056586391714c0516572d74&imgtype=jpg&src=http%3A%2F%2Fphotocdn.sohu.com%2F20160304%2Fmp61908174_1457088690323_29.jpeg","中国的消费力已经在改变世界 ","中国的消费力已经在改变世界 "));
+
+        //11
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/19/mp4/190313094901111138.mp4",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572960631985&di=c0ad335ec056586391714c0516572d74&imgtype=jpg&src=http%3A%2F%2Fphotocdn.sohu.com%2F20160304%2Fmp61908174_1457088690323_29.jpeg","中国的消费力已经在改变世界 ","中国的消费力已经在改变世界 "));
+
+        //12
+        items.add(new ListViewModel("http://vfx.mtime.cn/Video/2019/03/19/mp4/190312143927981075.mp4",
                 "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1572960631985&di=c0ad335ec056586391714c0516572d74&imgtype=jpg&src=http%3A%2F%2Fphotocdn.sohu.com%2F20160304%2Fmp61908174_1457088690323_29.jpeg","中国的消费力已经在改变世界 ","中国的消费力已经在改变世界 "));
 
 
