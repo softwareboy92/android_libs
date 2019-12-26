@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import com.lv.libmvp.activity.BaseActivity;
 import com.lv.libmvp.adapter.DelegateAdapter;
 import com.lv.libmvp.model.ItemData;
-import com.lv.libmvp.recycleview.TypeVo;
 import com.lv.mvp.R;
 import com.lv.mvp.contract.RecycleViewContract;
 import com.lv.mvp.holder.CostomViewHolder;
